@@ -1,5 +1,4 @@
-Project Overview--
-
+Project Overview
 This project implements a semantic search system using:
 
 • SentenceTransformer embeddings
@@ -8,8 +7,7 @@ This project implements a semantic search system using:
 • Custom semantic cache
 • FastAPI service
 
-System Architecture--
-
+System Architecture
 Query
  ↓
 Embedding
@@ -20,8 +18,7 @@ Vector DB Search (if miss)
  ↓
 Return results
 
-Running Instructions--
-
+Running Instructions
 python -m venv venv
 pip install -r requirements.txt
 
@@ -32,13 +29,14 @@ python -m scripts.train_clusters
 
 uvicorn app.main:app --reload
 
-API Endpoints--
-
+API Endpoints
 POST /query
 GET /cache/stats
 DELETE /cache
 
+Docker
 
-Docker--
+Run:
+
 docker build -t semantic-cache .
 docker run -p 8000:8000 semantic-cache
